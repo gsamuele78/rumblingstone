@@ -6,8 +6,14 @@ Runs a small set of representative queries against the canonical
 
   - Loading the entire source (the worst case).
   - Loading only the matching skill's SKILL.md (the routing-only case).
-  - Loading SKILL.md + the one reference file the routing table sends you to
-    (the realistic case).
+  - Loading SKILL.md + the one reference file the routing table sends you to,
+    PLUS any files the skill explicitly requires the agent to load before
+    that reference (the realistic case).
+
+Why "required" matters: the rumblingstone-campaign SKILL.md mandates loading
+campaign-coherence.md and ../../campaign/state.md before any domain
+reference. Counting only SKILL.md + one reference would systematically
+under-report campaign queries and inflate the published savings %.
 
 Token estimate: chars / 4. This is the standard Anthropic / OpenAI
 approximation for English+code mixed content. Replace with the official
@@ -16,6 +22,7 @@ tokenizer of your model for exact numbers; the ratios stay the same.
 Usage:
   python3 scripts/measure_tokens.py
   python3 scripts/measure_tokens.py --tokenizer tiktoken    # if installed
+  python3 scripts/measure_tokens.py --json                  # machine-readable
 """
 
 from __future__ import annotations
@@ -27,6 +34,18 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 SKILLS_DIR = REPO / "skills"
+
+# Files the skill itself requires loaded before any reference file.
+# Source: each skill's SKILL.md "Loading Protocol" / "Critical loading order"
+# section. Paths are relative to REPO so they survive skill moves.
+SKILL_REQUIRED_PRELOAD = {
+    "rumblingstone-campaign": [
+        "skills/rumblingstone-campaign/references/campaign-coherence.md",
+        "campaign/state.md",
+    ],
+    # dnd-35-srd and forgotten-realms-lore have no extra preload requirement
+    # beyond their SKILL.md. If that changes, add the entry here.
+}
 
 # Representative queries — (query_label, target_skill, target_reference_filename)
 QUERIES = [
@@ -68,21 +87,23 @@ def all_md_under(root: Path) -> list[Path]:
     return sorted(root.rglob("*.md"))
 
 
+def required_preload_paths(skill: str) -> list[Path]:
+    return [REPO / rel for rel in SKILL_REQUIRED_PRELOAD.get(skill, [])]
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--tokenizer", default="chars/4",
                     choices=["chars/4", "tiktoken"],
-                    help="Tokenization method. chars/4 is approximate, tiktoken is exact for OpenAI/Anthropic-like.")
+                    help="Tokenization method.")
     ap.add_argument("--json", action="store_true", help="Emit JSON instead of a human table.")
     args = ap.parse_args()
 
     count = make_token_counter(args.tokenizer)
 
-    # Worst case: load everything everywhere (the pre-split monolith behavior).
     all_paths = all_md_under(SKILLS_DIR)
     all_load = total_tokens(all_paths, count)
 
-    # Per-skill SKILL.md only.
     skill_md_only = {
         skill_dir.name: file_tokens(skill_dir / "SKILL.md", count)
         for skill_dir in sorted(SKILLS_DIR.iterdir())
@@ -94,12 +115,16 @@ def main() -> int:
     for label, skill, ref in QUERIES:
         skill_md = SKILLS_DIR / skill / "SKILL.md"
         ref_md = SKILLS_DIR / skill / "references" / ref
+        preload = required_preload_paths(skill)
 
         row_missing = []
         if not skill_md.is_file():
             row_missing.append(f"skill SKILL.md: {skill_md.relative_to(REPO)}")
         if not ref_md.is_file():
             row_missing.append(f"ref: {ref_md.relative_to(REPO)}")
+        for p in preload:
+            if not p.is_file():
+                row_missing.append(f"required preload: {p.relative_to(REPO)}")
 
         if row_missing:
             missing.append(f"  - {label}: " + "; ".join(row_missing))
@@ -112,12 +137,17 @@ def main() -> int:
             })
             continue
 
-        targeted = total_tokens([skill_md, ref_md], count)
+        # Avoid double-counting if the targeted reference IS one of the preloads.
+        load_set = {skill_md, ref_md, *preload}
+        targeted = total_tokens(sorted(load_set), count)
         skill_full = total_tokens(all_md_under(SKILLS_DIR / skill), count)
         rows.append({
             "query": label,
             "skill": skill,
             "ref": ref,
+            "tokens_skill_md": file_tokens(skill_md, count),
+            "tokens_ref": file_tokens(ref_md, count),
+            "tokens_required_preload": total_tokens(preload, count),
             "tokens_targeted": targeted,
             "tokens_skill_full": skill_full,
             "tokens_all_skills": all_load,
@@ -125,7 +155,6 @@ def main() -> int:
         })
 
     if missing:
-        # Print warnings to stderr so JSON output stays clean on stdout.
         print("WARNING: some QUERY entries point at missing files; "
               "they were marked missing rather than counted as zero:",
               file=sys.stderr)
@@ -137,18 +166,22 @@ def main() -> int:
             "tokenizer": args.tokenizer,
             "all_skills_load_tokens": all_load,
             "per_skill_md_tokens": skill_md_only,
+            "skill_required_preload": SKILL_REQUIRED_PRELOAD,
             "queries": rows,
         }, sys.stdout, indent=2, ensure_ascii=False)
         sys.stdout.write("\n")
         return 0
 
-    # Human table
     print(f"\nTokenizer: {args.tokenizer}")
     print(f"Worst case (load every skill md):  {all_load:>7,} tokens")
     print(f"\nPer-skill SKILL.md (routing only):")
     for k, v in skill_md_only.items():
-        print(f"  {k:<28} {v:>5,} tokens")
-    print(f"\nRepresentative queries (load SKILL.md + matching reference):\n")
+        suffix = ""
+        if SKILL_REQUIRED_PRELOAD.get(k):
+            preload_tokens = sum(file_tokens(p, count) for p in required_preload_paths(k))
+            suffix = f"  (+ {preload_tokens:,} required preload)"
+        print(f"  {k:<28} {v:>5,} tokens{suffix}")
+    print(f"\nRepresentative queries (SKILL.md + required preload + matching reference):\n")
     print(f"{'Query':<42} {'Targeted':>10} {'Skill Full':>11} {'vs All %':>10}")
     print("-" * 80)
     for r in rows:
@@ -163,11 +196,12 @@ def main() -> int:
               "Fix the QUERIES table or the file paths.")
         print()
     print("Read this honestly:")
-    print("  - 'Targeted' = what an agent loads when it follows the routing table.")
+    print("  - 'Targeted' = SKILL.md + every file the skill requires you to preload")
+    print("                  + the matching reference (deduplicated).")
     print("  - 'Skill Full' = what an agent loads if it grabs the whole matching skill.")
     print("  - 'vs All %' = savings vs loading every md file in skills/ (the dumb case).")
-    print("  These numbers are the actual lever. The README's old 70-85% figure")
-    print("  was theoretical; this is measured.")
+    print("  Campaign queries include campaign-coherence.md and campaign/state.md")
+    print("  in 'Targeted' because rumblingstone-campaign/SKILL.md mandates them.")
     return 0
 
 

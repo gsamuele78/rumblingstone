@@ -119,7 +119,7 @@ When any agent answers a question:
 | Read session logs before generating continuations | Invent events that contradict session logs |
 | Check `campaign/npcs/` before describing NPCs | Invent NPC stats not in files |
 | Use 3.5 SRD for all mechanics | Use 5e rules (different system) |
-| Load the dnd-35-rules skill for rules questions | Quote non-SRD books verbatim |
+| Load `dnd-35-srd` for mechanics, `forgotten-realms-lore` for setting, `rumblingstone-campaign` for PCs/arcs/coherence | Quote non-SRD books verbatim |
 | Flag 4e/5e Forgotten Realms lore as post-1372 DR | Present Spellplague as canon for this campaign |
 | Preserve 3.5-era Faerûn canon (1372 DR) | Mix in FR lore from after 1385 DR |
 
@@ -127,17 +127,20 @@ When any agent answers a question:
 
 ## Supported Agents
 
-The canonical skill source is `skills/dnd-35-rules/`. Per-agent mirrors are
+The canonical skill sources are the three skill trees under `skills/`
+(`dnd-35-srd`, `forgotten-realms-lore`, `rumblingstone-campaign`) plus the
+legacy meta-router `skills/dnd-35-rules`. Per-agent mirrors are
 **generated artifacts**, not committed to git (see `.gitignore`). Each
-developer/CI runs the build pipeline locally:
+developer/CI runs the build pipeline locally; every mirror receives all
+four skills under its own root:
 
-- **Claude Code** → `.claude/skills/dnd-35-rules/` (compact.md format)
-- **OpenAI Codex** → `.agents/skills/dnd-35-rules/` (machine.json)
-- **GitHub Copilot** → `.github/copilot/skills/dnd-35-rules/` (compact.md)
-- **Cursor** → `.cursor/skills/dnd-35-rules/` (machine.json)
-- **Windsurf** → `.windsurf/skills/dnd-35-rules/` (compact.md)
-- **Gemini** → `.gemini/skills/dnd-35-rules/` (structured.yaml)
-- **ChatGPT** → `.chatgpt/skills/dnd-35-rules/` (compact.md)
+- **Claude Code** → `.claude/skills/<skill>/` (compact.md format)
+- **OpenAI Codex** → `.agents/skills/<skill>/` (machine.json)
+- **GitHub Copilot** → `.github/copilot/skills/<skill>/` (compact.md)
+- **Cursor** → `.cursor/skills/<skill>/` (machine.json)
+- **Windsurf** → `.windsurf/skills/<skill>/` (compact.md)
+- **Gemini** → `.gemini/skills/<skill>/` (structured.yaml)
+- **ChatGPT** → `.chatgpt/skills/<skill>/` (compact.md)
 
 Build commands:
 

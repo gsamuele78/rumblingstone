@@ -62,7 +62,12 @@ if ! $NO_BUILD; then
     warn "[dry] Would run: build-skills.sh --no-deploy"
   fi
 else
-  info "Skipping build (--no-build). Using existing ${BUILD_DIR}/packages/"
+  info "Skipping build (--no-build). Using existing ${REPO_ROOT}/build/<skill>/packages/"
+  for skill_name in "${SKILL_NAMES[@]}"; do
+    if [[ ! -d "${REPO_ROOT}/build/${skill_name}/packages" ]]; then
+      warn "  ${skill_name}: no packages found at build/${skill_name}/packages — run without --no-build first."
+    fi
+  done
 fi
 
 # ── Step 2: Sync per-format packages to in-repo agent paths ─────────────────
