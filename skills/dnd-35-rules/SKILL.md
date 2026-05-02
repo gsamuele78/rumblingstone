@@ -14,17 +14,18 @@ three skills so agents only load what's relevant:
 
 | If the question is about... | Load skill |
 |---|---|
-| Pure 3.5 mechanics, SRD rules, generic d20 | `dnd-35-srd` |
-| Forgotten Realms canon (1372 DR), deities, regions, factions | `forgotten-realms-lore` |
-| RumblingStone campaign, the four PCs, custom artifacts, current arc | `rumblingstone-campaign` |
+| Pure 3.5 mechanics, SRD rules, generic d20 | `../dnd-35-srd/` |
+| Forgotten Realms canon (1372 DR), deities, regions, factions | `../forgotten-realms-lore/` |
+| RumblingStone campaign, the four PCs, custom artifacts, current arc | `../rumblingstone-campaign/` |
 
 Most questions need exactly one of the three. A typical campaign-prep
 question may need all three — load them in this order:
 
-1. `rumblingstone-campaign/SKILL.md` (and its `references/campaign-coherence.md`
-   plus `campaign/state.md`) — establishes what is currently true.
-2. `forgotten-realms-lore/SKILL.md` — establishes the setting frame.
-3. `dnd-35-srd/SKILL.md` — establishes the rules frame.
+1. `../rumblingstone-campaign/SKILL.md` (and its
+   `../rumblingstone-campaign/references/campaign-coherence.md` plus
+   `../../campaign/state.md`) — establishes what is currently true.
+2. `../forgotten-realms-lore/SKILL.md` — establishes the setting frame.
+3. `../dnd-35-srd/SKILL.md` — establishes the rules frame.
 
 ## Why three skills, not one
 

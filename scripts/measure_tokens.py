@@ -90,9 +90,28 @@ def main() -> int:
     }
 
     rows = []
+    missing: list[str] = []
     for label, skill, ref in QUERIES:
         skill_md = SKILLS_DIR / skill / "SKILL.md"
         ref_md = SKILLS_DIR / skill / "references" / ref
+
+        row_missing = []
+        if not skill_md.is_file():
+            row_missing.append(f"skill SKILL.md: {skill_md.relative_to(REPO)}")
+        if not ref_md.is_file():
+            row_missing.append(f"ref: {ref_md.relative_to(REPO)}")
+
+        if row_missing:
+            missing.append(f"  - {label}: " + "; ".join(row_missing))
+            rows.append({
+                "query": label,
+                "skill": skill,
+                "ref": ref,
+                "missing": True,
+                "missing_paths": row_missing,
+            })
+            continue
+
         targeted = total_tokens([skill_md, ref_md], count)
         skill_full = total_tokens(all_md_under(SKILLS_DIR / skill), count)
         rows.append({
@@ -104,6 +123,14 @@ def main() -> int:
             "tokens_all_skills": all_load,
             "savings_vs_all_pct": round(100 * (1 - targeted / all_load), 1) if all_load else 0,
         })
+
+    if missing:
+        # Print warnings to stderr so JSON output stays clean on stdout.
+        print("WARNING: some QUERY entries point at missing files; "
+              "they were marked missing rather than counted as zero:",
+              file=sys.stderr)
+        for m in missing:
+            print(m, file=sys.stderr)
 
     if args.json:
         json.dump({
@@ -125,9 +152,16 @@ def main() -> int:
     print(f"{'Query':<42} {'Targeted':>10} {'Skill Full':>11} {'vs All %':>10}")
     print("-" * 80)
     for r in rows:
-        print(f"{r['query']:<42} {r['tokens_targeted']:>10,} "
-              f"{r['tokens_skill_full']:>11,} {r['savings_vs_all_pct']:>9}%")
+        if r.get("missing"):
+            print(f"{r['query']:<42} {'MISSING':>10} {'-':>11} {'-':>10}")
+        else:
+            print(f"{r['query']:<42} {r['tokens_targeted']:>10,} "
+                  f"{r['tokens_skill_full']:>11,} {r['savings_vs_all_pct']:>9}%")
     print()
+    if missing:
+        print(f"NOTE: {len(missing)} query/queries are marked MISSING above. "
+              "Fix the QUERIES table or the file paths.")
+        print()
     print("Read this honestly:")
     print("  - 'Targeted' = what an agent loads when it follows the routing table.")
     print("  - 'Skill Full' = what an agent loads if it grabs the whole matching skill.")

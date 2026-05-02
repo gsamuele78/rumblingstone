@@ -11,7 +11,7 @@ path, adapted wholesale into the **Forgotten Realms, 1372 DR**. The original Els
 been remapped to **Cannath Vale** in the Eastern Dalelands. For the complete location mapping,
 NPC adaptation, faction notes, and regional encounter tables, see:
 
-→ `skills/dnd-35-rules/references/fr-cannath-vale.md`
+→ `skills/forgotten-realms-lore/references/fr-cannath-vale.md`
 
 ### Quick Reference: Name Changes — Verified from Antariuk Map Image
 
@@ -88,7 +88,7 @@ Tiamat crusade, coordinating with the Cult of the Dragon for a beachhead in the 
 - **Contested items**: Roll-off (d20 + relevant ability mod); winner gets +1 priority on next
   contested roll, so no one always wins
 - **Crafting**: Allowed between sessions at standard time/cost; must have downtime narrative
-- **NPC shops in Rethmar**: See `campaign/lore/rethmar-shops.md` when created
+- **NPC shops in Rethmar**: planned file at `campaign/lore/rethmar-shops.md` (not yet created — TBD)
 
 ---
 
@@ -108,7 +108,7 @@ Tiamat crusade, coordinating with the Cult of the Dragon for a beachhead in the 
 - **Recap**: First 5 minutes of each session, a player (rotating) gives the in-character recap
 - **Notes**: The campaign wiki lives in `campaign/sessions/`; each session gets a markdown file
 - **Absent players**: PCs present but "hanging back"; cannot take combat actions; receive 50% XP
-- **Session zero outcomes**: See `campaign/sessions/session-0.md` (create after first meeting)
+- **Session zero outcomes**: planned file at `campaign/sessions/session-0.md` (not yet created — TBD, after first meeting)
 
 ---
 
@@ -133,7 +133,7 @@ Tiamat crusade, coordinating with the Cult of the Dragon for a beachhead in the 
 
 ## DM MODIFICATION SECTION
 
-See `skills/dnd-35-rules/references/dm-expansion-toolkit.md` for:
+See `skills/rumblingstone-campaign/references/dm-expansion-toolkit.md` for:
 - Monster art generation prompts
 - Branching quest trees and artifact quest chains
 - Villain expansion templates

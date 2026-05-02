@@ -105,10 +105,10 @@ When any agent answers a question:
 2. **Non-SRD**: flag as `[Private source]`; do not reproduce copyrighted text verbatim
 3. **House rules** live in `campaign/lore/house-rules.md` — always check before ruling
 4. **RAW vs RAI**: state which you're providing; give both if ambiguous
-5. **Red Hand of Doom adaptations**: documented in `campaign/lore/rhod-adaptations.md`
-6. **DM Strategy & Player Profiles**: For adult-oriented, non-linear sessions (Shine Time, State Machine design), consult `skills/dnd-35-rules/references/campaign-dm-strategy.md` (canonical). The lore folder file `campaign/lore/dm-player-strategy.md` is now a pointer to that canonical source.
+5. **Red Hand of Doom adaptations**: documented in `skills/forgotten-realms-lore/references/fr-cannath-vale.md` (location/NPC mapping) and `skills/rumblingstone-campaign/references/campaign-story-arcs.md` (arc-by-arc adaptations)
+6. **DM Strategy & Player Profiles**: For adult-oriented, non-linear sessions (Shine Time, State Machine design), consult `skills/rumblingstone-campaign/references/campaign-dm-strategy.md` (canonical). The lore folder file `campaign/lore/dm-player-strategy.md` is now a pointer to that canonical source.
 7. **Living world state**: Before describing what NPCs know, where parties/villains currently are, or what threads are open, load `campaign/state.md`. It is the single source of truth for *current* world state (changes per session).
-8. **Coherence**: Before introducing artifact powers, NPC knowledge, or callbacks to past PG actions, consult `skills/dnd-35-rules/references/campaign-coherence.md`.
+8. **Coherence**: Before introducing artifact powers, NPC knowledge, or callbacks to past PG actions, consult `skills/rumblingstone-campaign/references/campaign-coherence.md`.
 
 ---
 

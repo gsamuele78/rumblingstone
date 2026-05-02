@@ -47,7 +47,15 @@ for skill_dir in "${REPO_ROOT}/skills"/*/; do
 done
 
 if [[ ${#SKILLS[@]} -eq 0 ]]; then
-  echo "ERROR: no skills found in ${REPO_ROOT}/skills/" >&2
+  if [[ -n "${SKILL_FILTER}" ]]; then
+    echo "ERROR: skill '${SKILL_FILTER}' not found under ${REPO_ROOT}/skills/" >&2
+    echo "Available skills:" >&2
+    for d in "${REPO_ROOT}/skills"/*/; do
+      [[ -f "${d}SKILL.md" ]] && echo "  - $(basename "${d%/}")" >&2
+    done
+  else
+    echo "ERROR: no skills found in ${REPO_ROOT}/skills/ (no directory contains a SKILL.md)" >&2
+  fi
   exit 1
 fi
 
@@ -57,31 +65,18 @@ echo "║      RumblingStone — Skill Optimization Pipeline            ║"
 echo "╚══════════════════════════════════════════════════════════════╝"
 echo "  Skills to build: ${SKILLS[*]}"
 
-# ── Per-agent format preference. Drop entry to skip an agent.
-# The legacy index.json is no longer copied into per-agent packages — no
-# mainstream agent loader (Claude, Cursor, Windsurf, ChatGPT, Gemini) reads
-# it. The index is still produced under build/<skill>/index.json for use by
-# scripts and humans. See scripts/README.md for rationale.
-declare -A AGENT_FORMAT=(
-  ["claude"]="compact.md"
-  ["gemini"]="structured.yaml"
-  ["codex"]="machine.json"
-  ["chatgpt"]="compact.md"
-  ["cursor"]="machine.json"
-  ["windsurf"]="compact.md"
-  ["copilot"]="compact.md"
-)
+# ── Per-agent matrix is sourced from a single config so build and sync agree.
+# Edit scripts/agents.conf to add/rename agents — never duplicate it here.
+# shellcheck source=agents.conf
+source "${SCRIPT_DIR}/agents.conf"
 
-declare -A AGENT_INSTALL_PATHS=(
-  ["claude"]="${HOME}/.claude/skills"
-  ["codex"]="${HOME}/.codex/skills"
-  ["cursor"]="${HOME}/.cursor/skills"
-  ["windsurf"]="${HOME}/.windsurf/skills"
-)
-
-# Agents that genuinely consume index.json (currently none — leave empty).
-# Add an agent name here if/when its loader is documented to read index.json.
-declare -A AGENT_INDEX_AWARE=()
+# Sanity: every agent declared with a format must have a known format value.
+for agent in "${!AGENT_FORMAT[@]}"; do
+  case "${AGENT_FORMAT[$agent]}" in
+    compact.md|structured.yaml|machine.json) ;;
+    *) echo "ERROR: agents.conf: unknown format '${AGENT_FORMAT[$agent]}' for ${agent}" >&2; exit 1 ;;
+  esac
+done
 
 # ── Build each skill ────────────────────────────────────────────────────────
 for SKILL_NAME in "${SKILLS[@]}"; do

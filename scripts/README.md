@@ -41,7 +41,18 @@ RAW .md → compress_skills.py → compact.md / structured.yaml / machine.json
 ./scripts/build-skills.sh --measure           # report compression numbers
 ./scripts/build-skills.sh --dry-run           # see what would happen
 ./scripts/sync-skills.sh                      # populate in-repo mirrors (gitignored)
+
+./scripts/validate_skill_paths.py             # check all cross-references resolve
+./scripts/measure_tokens.py                   # measured token cost per representative query
+./scripts/measure_tokens.py --tokenizer tiktoken --json  # exact + machine-readable
 ```
+
+## Agent matrix (single source of truth)
+
+`scripts/agents.conf` declares every agent (format, install root, in-repo
+mirror root, and whether the loader consumes `index.json`). Both
+`build-skills.sh` and `sync-skills.sh` source it. **Never duplicate the
+agent list anywhere else** — adding an agent means editing only that file.
 
 ## What is NOT committed
 

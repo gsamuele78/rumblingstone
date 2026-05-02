@@ -60,7 +60,7 @@ the listed consequence triggers.
 
 | NPC | Knows that... | Learned how / when |
 |---|---|---|
-| Sonjak | The party freed the Cristal Warriors but does NOT know they have all 3 Crown gems | Drow scouts witnessed the mine assault |
+| Sonjak | The party freed the Cristal Warriors (intentional Italian-flavored in-world name; cf. campaign-history.md) but does NOT know they have all 3 Crown gems | Drow scouts witnessed the mine assault |
 | Il Collezionista | Artemis carries the Ring of Chaotic Illumination | Witnessed at minotaur lair; sent guild operatives to track |
 | Il Collezionista | Therysol is alive and hunting him | Inferred from missing guild operatives in Underdark |
 | Re Thorek Hammerfist | The party are now Custodi Eterni; he has named them so | Awarded post-siege |

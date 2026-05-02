@@ -245,5 +245,5 @@ After the destruction of Drellin's Ferry (where Thorik died and was resurrected)
 - **Phase 4 — Circolo degli Otto & Mythal:** 8 archmages create barrier + animate city statues as stone golems (Harry Potter Battle of Hogwarts style)
 - **Allied reinforcements:** Hammerfist dwarves, Circle of Eight, Druid Circle (conditional), Tiri Kitor elves (conditional), Ghostlord (negotiable)
 
-For full story arc details: `references/campaign-story-arcs.md`
+For full story arc details: `campaign-story-arcs.md` (sibling)
 For full narrative history: `campaign/lore/campaign-history.md`

@@ -143,10 +143,10 @@ Battle of Rethmar (Arc 09-P3, 5 Phases):
 
 | Need to know about... | Load file |
 |---|---|
-| Party stats and combat details | `references/campaign-party.md` |
-| Artifact mechanics and synergies | `references/campaign-artifacts.md` |
-| Cannath Vale map and locations | `references/fr-cannath-vale.md` |
-| All factions (canonical + custom) | `references/fr-factions.md` |
-| DM tools, quests, monster art | `references/dm-expansion-toolkit.md` |
+| Party stats and combat details | `campaign-party.md` (sibling) |
+| Artifact mechanics and synergies | `campaign-artifacts.md` (sibling) |
+| Cannath Vale map and locations | `../../forgotten-realms-lore/references/fr-cannath-vale.md` |
+| All factions (canonical + custom) | `../../forgotten-realms-lore/references/fr-factions.md` |
+| DM tools, quests, monster art | `dm-expansion-toolkit.md` (sibling) |
 | Full narrative history | `campaign/lore/campaign-history.md` |
 | House rules | `campaign/lore/house-rules.md` |
