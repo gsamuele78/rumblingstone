@@ -8,7 +8,7 @@
 **Grado di Sfida (GS):** 14
 **Allineamento:** Neutrale Malvagio (schermato come Legale Buono)
 **Era d'Origine:** -1000 DR (Epoca di Hammerfist)
-**Datori di Lavoro:** Il Collezionista (Rakshasa) + Matrona Sajak (Drow, sottosuolo Cannath)
+**Datori di Lavoro:** Il Collezionista (Rakshasa) + Sonjak (Drow Matrona, sottosuolo Cannath) — *Matrona Sajak* nel codice operativo di Sal (vedi `PNG/Sonjak/Sonjak.md`)
 
 ---
 
@@ -41,7 +41,7 @@ Stesso volto, ma irriconoscibile nel portamento. Abiti semplici: vesti di seta g
 | **Saggezza** | 12 | +1 |
 | **Carisma** | 22 | +6 |
 
-**Punti Ferita:** 79 (14 DV: 13d6+28)
+**Punti Ferita:** 79 (14d6+28)
 **Iniziativa:** +8 (+4 Des, +4 Talento)
 **Velocità:** 9 m
 
