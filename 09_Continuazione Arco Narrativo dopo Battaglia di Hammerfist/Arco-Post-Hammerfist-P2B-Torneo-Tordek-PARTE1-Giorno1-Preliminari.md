@@ -5,6 +5,9 @@ Arco-Post-Hammerfist-P2B-Torneo-Tordek-PARTE1-Giorno1-Preliminari.md
 
 Piazza centrale, piattaforma rotante, introduzione all’Orbe
 
+> **Cornice complessiva (3 giorni, milestone, subquest paralleli, regole di split-party, echi BG3-style):** vedi `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md`.
+> Questo file gestisce i **match di Tordek** del Giorno 1. Per le subquest di Thorik / Hella / Artemis che girano in parallelo, vedi i tre file dedicati `…SUBQUEST-*.md`.
+
 ## Regole speciali giornata
 
 - Arena: piattaforma circolare rotante.

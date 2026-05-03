@@ -5,6 +5,9 @@ Arco-Post-Hammerfist-P2B-Torneo-Tordek-PARTE2-Giorno2-Semifinali.md
 
 Specchi, nebbia, colonne fluttuanti
 
+> **Cornice complessiva:** vedi `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md`.
+> **Milestone fissa del Giorno 2 — Tramonto:** Consiglio di Crisi a Dauth (la Vanguard del Red Hand è a 1 giorno dalla città). Vedi `…SUBQUEST-Thorik.md` §4 per la scena giocabile.
+
 ## Regole speciali giornata
 
 - Arena 1: labirinto di specchi e nebbia.

@@ -49,6 +49,10 @@ the listed consequence triggers.
 | Wyrmlord Saarvith + Regiarax | Lake Rhest ruins | Rebuild dragonrider corps from black dragon spawn | 3/8 | Rhest becomes a fortified war camp; CR +1 to assault |
 | Xal'thor (Illithid Coordinator, psionic) | En route with an Illithid invasion force (psionic thralls, larvae, a small core of dominated Githyanki — NOT the free Githyanki dragon-rider force led by Vaereth, which is a separate and hostile faction) | Day 3 fixed assault on the Dauth Tournament to seize Tordek's **Bracieri Gemelli** (planar keys to the Eternal Forge); does NOT target the Orbe delle Otto Porte | Fixed: triggers Day 3 of Tournament regardless | Tournament becomes combat encounter |
 | Sethrax il Velato (Illithid emissary, Zalkatar's conclave) | Dauth — infiltrated as tournament finalist "Kethran Mano di Pietra" | Extract a "Seme di Porta" from the Orbe delle Otto Porte during the Tournament's peak resonance, deliver it to Zalkatar at the Invisible Tower | Sync to Tournament (Day 1 = arrival; Day 2 = entered as finalist; Day 3 Round 7 = forced unmasking by Xal'thor's portal) | Sethrax flees to Invisible Tower with the seed → Zalkatar gains +2 effective CR + new orb-derived Mind Blast in P2A finale (Artemis's quest) |
+| Wyrmlord Karruk Tagliarossa (Red Hand Vanguard) | Cannath Vale, marching on Dauth | Detached from Azarr Kul's main horde to destroy the 150 Hammerfist lances before they can reinforce Rethmar; sack Dauth supplies | Sync to Tournament Day 3 dawn (fixed assault on Dauth Porta Nord) | Dauth city falls or holds; 150 Hammerfist lances diminished or intact for Rethmar |
+| Verric Talsten (Sergente, Red Hand asset reluctant) | Dauth, Porta Nord caserma | Continues feeding tactical info to Red Hand to keep his sister Velda alive | Sync to Tournament (resolved Day 1–2 by Thorik's choice in `…SUBQUEST-Thorik.md`) | If unresolved by Day 2 evening: Vanguard has full intel → Wyrmlord +1 CR Day 3 |
+| Mask cult — Beriah's cell (Dauth) | Dauth, urban cover "Volti Coperti" gilda | Recruit Artemis as long-term asset; recover ritual grimoire from Invisible Tower | New clock: 0/6 (default) → 3/6 if Artemis accepts pact (Via A) → 6/6 immediate if Beriah killed (Via D) | Mask cult assassins or sub-plot at Rethmar depending on resolution |
+| Mother of Fungi spore (Dauth boschetto) | Sacred grove east of Dauth | Mature into Fungal Crawler in 30 days, contaminate 5-mile radius | Sync to Tournament (resolved by Hella `…SUBQUEST-Hella.md`) | If unresolved: contamination spreads → Sonjak's Cannath Vale clock advances +1 turn |
 | Azarr Kul (High Wyrmlord) | With main horde, marching | Reach Rethmar in 18 in-world days | 9/18 days | Siege of Rethmar begins |
 | Conte Valerius (manipulator) | Capital city | Legalize horde funding via "patriotic emergency" loans | 2/8 | Party loses access to legitimate guild merchants |
 
@@ -139,6 +143,11 @@ changelog with the resolution.
 - Does Artemis confront the Mask cult before the Ring fully evolves?
 - **[TORNEO ↔ TORRE]** Will the party unmask Sethrax (a.k.a. "Kethran Mano di Pietra") at Dauth before Day 3 Round 7? (If unmasked early or killed: Zalkatar's clock slows; if Sethrax escapes with the "Seme di Porta": Zalkatar gains +2 effective CR for Artemis's P2A finale)
 - **[TORNEO]** Will Tordek interpret the "Eco delle Fenditure" vision and warn Artemis (or vice versa) of the Githyanki–Illithid–Illithid triangle around the Orbe?
+- **[TORNEO ↔ THORIK]** How does Thorik resolve the case of Sergente Verric (denounce / cover as double-agent / rescue Velda)? Determines Wyrmlord Karruk's CR at Day 3 city siege and Dauth volunteer count for Rethmar.
+- **[TORNEO ↔ HELLA]** Will Hella purify the boschetto morente, and if so, with what sacrifice (Toppi the fey / 12 hobgoblin / partial rite at her own Cos cost / abandon)? Determines Druid Circle attitude and Mother of Fungi clock.
+- **[TORNEO ↔ ARTEMIS]** Does Artemis accept Beriah's pact (Mask cult), refuse cleanly, negotiate partial terms, or kill the emissary? Determines Mask cult clock activation and Torre Invisibile difficulty.
+- **[TORNEO ↔ DAUTH]** Will the city Council nominate Thorik (PG), Lord Vargen, or Lyala Berthand (Tyr) as defense commander on Day 3? Affects Wyrmlord Karruk effective CR and post-siege political capital.
+- **[TORNEO ↔ MERCENARI]** Can Thorik negotiate the additional 150 Vargen volunteers DURING the Day 3 siege, bringing the total Hammerfist+Dauth lances to ~300 for Rethmar? Or do only the canon 150 Hammerfist lances reach Rethmar?
 - **[CONSIGLIO]** Will the party remove Halveth before Day 33 Seduta 2? (If not: +1 CR Phase 0, resa vote passes by Kaal's double vote)
 - **[CONSIGLIO]** Can the party convince Lady Kaal with a credible military plan? (Diplomacy CD 22 + allied faction list required)
 - **[LORANA]** Will the party reconnect with Lorana and use her field intel for Thorik's Rethmar defense plan? (-1 CR Phase 1 if yes)
@@ -178,6 +187,35 @@ entries — they become campaign history.
             Sethrax's "seme di Porta" extraction, Githyanki clock-advance
             rule, Eco delle Fenditure vision) are now established
             campaign canon.
+2026-05-03  Tournament arc deep-dive expansion. Added 5 canonical files
+            consolidating the 3-day Dauth Tournament structure with
+            milestones, parallel sub-quests, parallel city siege, and
+            BG3-style downstream echoes (no railroad, adult-tone choices):
+            - 09_Continuazione.../Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md
+              (3-day flow, milestones, party Voci, split-party rules,
+               consolidated cross-link hub, narrative tone palette
+               Andor + House of David + Tolkien)
+            - …-DAUTH-SUBQUEST-Thorik.md (Andor: Sergente Verric,
+               Consiglio di Crisi, comando difesa, espansione 150→300
+               lance via negoziato Vargen)
+            - …-DAUTH-SUBQUEST-Hella.md (Tolkien: il boschetto morente,
+               Sylith ranger, Mother of Fungi spore, 4 vie morali con
+               echi su Druid Circle e Cannath Vale)
+            - …-DAUTH-SUBQUEST-Artemis.md (House of David: Beriah il
+               profeta mascherato, 4 vie con echi su Torre Invisibile
+               e Mask cult, Atto 2 Lathander cieca, Atto 3 maschera-NPC)
+            - …-DAUTH-DAY3-DAUTH-CITY-SIEGE.md (parallel front: Wyrmlord
+               Karruk Tagliarossa CR 12 + Vanguard ~600 effettivi vs
+               150 lance Hammerfist + Dauth militia; round-by-round 8–10)
+            - …-DAUTH-CONSEGUENZE-ECHI-LUNGO-PERIODO.md (authoritative
+               BG3-style outcome table: Rethmar troop counts, villain CR
+               modifiers, additional encounters, RP echoes per PG)
+            New active villain clocks: Wyrmlord Karruk (Day 3 fixed),
+            Verric Talsten (sync), Mask cult Beriah cell (0/6 default),
+            Mother of Fungi spore at Dauth grove (sync). 6 new open
+            narrative threads bridging Tournament ↔ Torre ↔ Hella's
+            arc ↔ Rethmar troop math. Existing PARTE1/2/3 files updated
+            with cross-link headers; no mechanical changes.
 2026-05-03  Code-review fixes on the Tournament ↔ Torre integration:
             - Typos in PNG/Sethrax_il_Velato/Sethrax.md (article gender,
               "priorità alla ritirata").

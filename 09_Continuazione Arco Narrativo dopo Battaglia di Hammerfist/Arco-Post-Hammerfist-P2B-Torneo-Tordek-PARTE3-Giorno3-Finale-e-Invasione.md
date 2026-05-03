@@ -3,6 +3,12 @@ Arco-Post-Hammerfist-P2B-Torneo-Tordek-PARTE3-Giorno3-Finale-e-Invasione.md
 
 # Giorno 3 – Finale & Invasione Illithid
 
+> **Questo file gestisce il fronte ARENA del Giorno 3.** Il Giorno 3 ha **due fronti paralleli**:
+> - **Fronte Arena** (questo file) — Tordek vs Rihan, poi Xal'thor + Sethrax + Vaereth.
+> - **Fronte Mura** — Vanguard del Red Hand of Doom assalta Dauth: vedi `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DAY3-DAUTH-CITY-SIEGE.md`.
+>
+> Per la cornice complessiva, milestone, regole di split-party, e tabella echi BG3-style → `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md`.
+
 ## Regole speciali giornata
 
 - Prima Fase: arena perfetta, piedistallo con Orbe al centro.
