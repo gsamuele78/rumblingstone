@@ -35,7 +35,72 @@
 
 ---
 
-## 2. Active Villain Threads (Countdown Clocks)
+## 2. Active Forces — Live Army Tracker
+
+> **Cross-reference:** Full calculations and battle log in
+> `00_Red Hand Of Doom/Armate-CALCOLI-ESERCITI-DINAMICI.md` and
+> `00_Red Hand Of Doom/Armate-SINCRONIZZAZIONE-CAMPAGNA.md`.
+> The ODS spreadsheet (`Armate-AGGIORNATO.ods`) has 9 sheets including
+> session-by-session tracker. **Update this section at the end of every session.**
+
+### Red Hand of Doom — Current Force
+
+| Field | Value | Last Update |
+|---|---|---|
+| March day | **9 / 18** | Mirtul 1372 DR baseline |
+| Days remaining to Rethmar assault | **9** (base) → up to **15** with PG interference | — |
+| Main body at march start | 4.793 | Baseline |
+| Losses accumulated (Days 1-9: Nimon Gap + Drellin + attrition) | **−308** | ✅ Confirmed |
+| **Main body current** | **4.485** | Update each session |
+| Hammerfist survivors (rejoin ~Day 14) | **+486 pending** ⏳ | — |
+| Dauth survivors (rejoin ~Day 16-17) | **+440 pending** ⏳ | — |
+| Centaurs in horde | 400 (❓ revolt possible) | — |
+| Loxo war beasts | 40 (❓ revolt possible) | — |
+| Wyverns (Ghostlord, if no deal) | 18 (❓ 0 if negotiated) | — |
+| **Estimated force at Rethmar** | **3.783 – 5.053** | Scenario A–D |
+
+### Cannon Vale Settlements — Status & Refugee Flow
+
+| Settlement | Status | Refugees Sent to Rethmar | Armed Fighters +Rethmar | Timing |
+|---|---|---|---|---|
+| Nimon Gap | ✅ Abandoned / occupied by 50 hob. scouts | ~180 fled | +25 Warrior 1 | ✅ Already arrived |
+| Drellin's Ferry | ✅ Burned (Day 4-7) | ~1.500 fled, 500 dead/captured | +110 mixed | ✅ Mostly arrived |
+| Talar | ⏳ Next to fall (~Day 8-12) | ~400 fleeing | +35 Warrior 1 | ⏳ Arriving Days 10-13 |
+| Terrelton | ⏳ Next (~Day 9-13) | ~1.600 fleeing | +65 Warrior 1 | ⏳ Arriving Days 11-15 |
+| Witchcross / Guado delle Streghe | ⏳ Next (~Day 9-13) | ~1.200 (druids stay) | +60 Warrior 1 | ⏳ Arriving Days 12-15 |
+| Prosser, Hillwatch (east, safer) | ⚠ Threatened but not yet struck | ~300 partial | +50 | ⏳ Days 14-17 |
+| Hammerfist Holds | ✅ Held (90 survivors; 150 lances cond.) | 0 civilians | +150 Fighter 4-6 ❓ | ❓ Day 35 if Tordek wins |
+| Cannathgate | ✅ Not attacked | 0 civilians | +150 Fighter 3 ❓ | ❓ Diplomacy needed |
+
+### Rethmar Defenders — Current Strength
+
+| Category | Count | Condition |
+|---|---|---|
+| City garrison (fixed) | 1.051 | Guaranteed |
+| Refugees already armed and integrated | +135 | ✅ Arrived |
+| Refugees armed, in transit | +360 | ⏳ Days 10-16 |
+| Emergency levy (Rethmar citizens) | +200 | Guaranteed |
+| **Guaranteed total** | **1.746** | Base defense |
+| Conditional alliances (max) | +1.216 | All 6 quests done |
+| **Maximum coalition** | **2.962** | Best case |
+
+**Infiltrators in refugee wave:** 3-5 agents (2 hobgoblin + 1 drow + 2 gnoll disguised).
+Detect: Sense Motive CD 18 / Detect Magic. If caught: −2 CR Phase 0. If not: +1 CR + 20 defenders poisoned.
+
+### Clock Modifiers (PG Actions → Days Added)
+
+| Action | +Days | Applied? |
+|---|---|---|
+| Skull Gorge bridge destroyed | +2-3 | ❓ |
+| Centaur revolt triggered | +2 | ❓ |
+| Loxo revolt triggered | +1 | ❓ |
+| Both revolts | +3 | ❓ |
+| All interference combined | +5-6 | ❓ |
+| **Current effective days remaining** | **9** | Update |
+
+---
+
+## 3. Active Villain Threads (Countdown Clocks)
 
 State machine, not script. Each villain has an agenda that advances each
 in-world day **whether or not the party intervenes**. When a clock fills,
@@ -55,7 +120,7 @@ the listed consequence triggers.
 
 ---
 
-## 3. Open NPC Knowledge State
+## 4. Open NPC Knowledge State
 
 > Who currently knows what. **Agents must NOT have an NPC reveal something
 > they have not learned in-fiction.** Add new rows when an NPC learns
@@ -87,7 +152,7 @@ the listed consequence triggers.
 
 ---
 
-## 4. Open Promises, Debts, Bargains (PG ↔ World)
+## 5. Open Promises, Debts, Bargains (PG ↔ World)
 
 > Things the PCs are **on the hook for**. Agents must surface these when
 > relevant; they create R.A. Salvatore-style internal stakes.
@@ -105,7 +170,7 @@ the listed consequence triggers.
 
 ---
 
-## 5. Artifact State (current powers, not theoretical max)
+## 6. Artifact State (current powers, not theoretical max)
 
 See `skills/rumblingstone-campaign/references/campaign-artifacts.md` for
 full mechanics. This table is current truth only.
@@ -129,7 +194,7 @@ coherence violation — flag to DM.
 
 ---
 
-## 6. Open Narrative Threads (DM tracker)
+## 7. Open Narrative Threads (DM tracker)
 
 Bullet list of unresolved questions. When a thread closes, move it to the
 changelog with the resolution.
@@ -156,7 +221,7 @@ changelog with the resolution.
 
 ---
 
-## 7. Changelog (append-only)
+## 8. Changelog (append-only)
 
 Every state change goes here with date and one-line reason. Never delete
 entries — they become campaign history.
@@ -274,4 +339,22 @@ entries — they become campaign history.
             tournament-invitation messenger because he is compromised
             (employed by Il Collezionista + Sonjak); Tempestas serves
             that role exclusively.
+2026-05-05  Added §2 Active Forces — Live Army Tracker to state.md as the
+            session-by-session source of truth for force sizes. Created:
+            - 00_Red Hand Of Doom/Armate-CALCOLI-ESERCITI-DINAMICI.md:
+              full initial composition (6,161 total), deployment table
+              (Hammerfist 793/Dauth 575), dynamic march attrition by week,
+              defender coalition scenarios, Dauth multi-faction breakdown.
+            - 00_Red Hand Of Doom/Armate-SINCRONIZZAZIONE-CAMPAGNA.md:
+              battle log waypoint-by-waypoint (Nimon Gap ✅ → Drellin ✅ →
+              Skull Gorge 🔄 → Talar/Terrelton/Witchcross ⏳), refugee flow
+              table (~5.300 civili + ~495 armati verso Rethmar), cumulative
+              loss table per scenario (3.783–5.053 MR a Rethmar), session
+              checklist, infiltrati nell'onda rifugiati.
+            - 00_Red Hand Of Doom/Armate-AGGIORNATO.ods: now 9 sheets
+              (aggiunti Registro Battaglie, Rifugiati Rethmar, Tracker
+              Dinamico). Forza garantita Rethmar aggiornata a 1.746
+              (include rifugiati armati da Nimon+Drellin già arrivati).
+            Current confirmed losses MR: −308 (Days 1-9, Nimon+Drellin
+            +attrition). Main body: 4.793 → 4.485 active.
 ```
