@@ -29,13 +29,139 @@
 | Artemis | Human Warlock 13 | Hammerfist → traveling to Invisible Tower (Dauth region) | Full; Ring of Chaotic Illumination active | Confront Zalkatar (CR 13 illithid warlock); Ring evolution at stake |
 
 **Active companions:**
+
 - Hella's stone rhinoceros companion (DR 5/adamantine, animated post-resurrection)
 - Therysol (Tiefling Half-Dragon NPC, traveling separately, hunting Il Collezionista's guild)
 - **Maestro Tempestas** (Half-elf Bard 12/Arcmage 2, GS 14, recurring messenger of Rethmar; canonized 2026-05-04 as the "bard storm caller" who helped the party escape Lorana's city in Arc 00 — vedi `PNG/Tempestas/Tempestas.md`). Not constantly present; drops in via *Shadow Walk* every 1–2 sessions with intel.
 
 ---
 
-## 2. Active Villain Threads (Countdown Clocks)
+## 2. Active Forces — Live Army Tracker (v2 — Dual Clock)
+
+> **Cross-reference:** Full calculations in
+> `00_Red Hand Of Doom/Armate-CALCOLI-ESERCITI-DINAMICI.md`,
+> march/attrition waypoint log in
+> `00_Red Hand Of Doom/Armate-SINCRONIZZAZIONE-CAMPAGNA.md`, and the
+> five PG-scenario force-balance table in
+> `09_Continuazione.../Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-ARMATE-SYNC.md`.
+> **Update this section at the end of every session.**
+
+### 2.0 Dual-Clock Separation (canon 2026-05-05)
+
+Two independent clocks drive Arc 09:
+
+1. **MARCH CLOCK** — the official AP (RHoD) campaign timeline for the
+   physical march of the horde. Deterministic waypoints (except where
+   PG have already shifted them). Runs **Day 1 → Day 40**.
+2. **RITUAL CLOCK (Azarr Kul)** — rituals at the Fane of Tiamat,
+   independent of marching distance. Still `/18`. **Does NOT advance
+   with march days.** Advances only on ritual triggers (see §3).
+
+### 2.1 March Clock — Official AP Waypoints
+
+| Day | Waypoint | Status |
+|---|---|---|
+| 1 | Horde leaves Fane of Tiamat (Shaar) | ✅ Past |
+| 6 | Vraath Keep (Channath Vale equivalent) occupied | ✅ Past |
+| 8–9 | **Skull Gorge bridge** — crossed intact (PG did NOT sabotage, confirmed) | ✅ Past |
+| 12–13 | Drellin's Ferry equivalent falls (burned) | ✅ Past |
+| **19** | **Terrelton equivalent falls** | 🎯 **SYNC POINT = End of Battle of Hammerfist** |
+| 25 | Marth Fen / Blackfens (Rhest area) | ⏳ Pending |
+| 33–35 | Elsir Crossroads / Channath Crocevia | ⏳ Pending |
+| **40** | **Horde arrives at Rethmar (ex-Brindol) and encamps** | 🎯 **Rethmar assault begins** |
+
+**Current March Day:** **19** (Terrelton just fell as Hammerfist ended).
+**Days remaining to Rethmar:** **21** (PG-quest window = Arc 09).
+
+### 2.2 Red Hand of Doom — Horde Composition (Baseline ~10,000)
+
+| Contingent | Baseline | Notes |
+|---|---|---|
+| Core Hobgoblin (fanteria + veterani + sergenti + Warrior-3 élite) | 4,800 | |
+| Ausiliari Goblin/Orchi/Worg Riders | 1,800 | |
+| Giganti + Ogre + Ettin | 180 | NO PG alliance — stay with Red Hand |
+| Forze Alate (Manticore, Wyvern, Hell Hounds, Chimera) | 140 | |
+| Casters Mano Rossa (War Adepts, Blue, Warpriests di Tiamat) | 55 | |
+| **Dragons (5 AP-original upscaled)** | 5 | Abithriax (Red adult) / Regiarix (Black young, Rhest) / Ozyrrandion (Blue, Tower) / Tyrgarun (reserve) / **Fauci di Palude** (Black adult, Hammerfist vanguard) |
+| **Draconic spawn = Razorfiend (Tiamat colors)** | 8 | Assigned to Wyrmlord villains upscaled |
+| Compagnia Drow di Sonjak | 305 | |
+| Githyanki di Vaereth | 375 | |
+| Gnoll mercenari (3 tribù: Flinderoso, Abbattitori, Artigli Neri) | 1,100 | |
+| Loxo + Centauri corrotti (Shaar) | 480 | ❓ Revolt possible |
+| **Compagnia del Teschio Nero** (umani malvagi mercenari, Thay/Mulhorand) | 650 | NEW 2026-05-05 |
+| **BASELINE TOTAL** | **~9,900** | ≈ 10,000 ✓ |
+
+**Post-Hammerfist losses (Day 19 sync):** −500 (Fauci di Palude detachment
+annientato/disperso; does NOT rejoin main body). Current active:
+**~9,400**.
+
+### 2.3 Conditional Additives (apply at Rethmar if triggered)
+
+| Condition | Effect on Horde |
+|---|---|
+| Ghostlord **NOT neutralized** (default hostile) | +2,400 undead wave at Phase 2 |
+| Ghostlord **neutralized by PG** | Only +400 undead (pre-deployed detachment) |
+| Ghostlord **redento/alleato** (rare branch) | +600 "good" undead among DEFENDERS instead |
+| Xal'thor allies with Red Hand | +400 Illithid thralls |
+| Il Collezionista intervenes | +300 Rakshasa cultists |
+| PG destroy Skull Gorge bridge | (N/A — already crossed intact) |
+| PG sabotage Centaur/Loxo → revolt | −480 horde |
+| PG defeat Regiarix at Rhest | −1 dragon, −2 Razorfiend |
+| PG defeat Ozyrrandion at Tower | −1 dragon |
+
+**Worst-case horde at Rethmar:** ~12,700 | **Best-case (all PG
+sabotages):** ~7,200
+
+### 2.4 Rethmar Defenders — PG-Dependent Balance
+
+**Baseline (no PG quests completed):** ~2,200 → ratio **4.5:1** → sconfitta
+quasi certa.
+
+| Contingent | Count | Condition |
+|---|---|---|
+| Guarnigione Rethmar (Valerius + milizia) | 1,200 | Fixed |
+| Rifugiati armati (Elsir/Channath Vale) | 600 | +150/villaggio evacuato in tempo |
+| Truppe Consiglio Rethmar | 400 | Via Thorik/Brenna letter |
+| **Alleanza Elfi Starsong Hill** | +500 | SOLO se P3-Starsong quest OK |
+| **Nani di Dauth** (Tordek torneo) | +400 | SOLO se Tordek vince torneo |
+| **Druidi Cerchio Sacro + Treant Hella** | +150 | SOLO se P1B Hella ritual OK |
+| **Ghostlord redento come alleato** | +600 non-morti buoni | Branch raro |
+| Mercenari Salvatore (rischio tradimento) | ±300 | Instabile |
+
+**Scenari finali (target: PG meaningfully shift balance):**
+
+| Scenario PG | Horde | Difensori | Rapporto |
+|---|---|---|---|
+| Worst (Ghostlord ostile, Xal'thor allea, 0 quest) | 12,700 | 2,200 | **5.8:1** ☠ |
+| Baseline (0 quest) | 9,400 | 2,200 | **4.3:1** |
+| Medio (2–3 quest + sabotaggi parziali) | 8,000 | 3,100 | **2.6:1** |
+| Ottimale (tutte quest + Rhest + Tower) | 6,800 | 4,100 | **1.66:1** |
+| Leggendario (ottimale + Ghostlord redento + Collezionista stop) | 6,400 | 4,700 | **1.36:1** |
+
+**Riferimento Hammerfist:** 900/300 = **3:1** (battaglia vinta con
+sacrifici — baseline narrativo).
+
+### 2.5 Infiltratori / Refugee Ledger
+
+**Infiltrators in refugee wave:** 3-5 agents (2 hobgoblin + 1 drow + 2
+gnoll disguised). Detect: Sense Motive CD 18 / Detect Magic. If caught:
+−2 CR Phase 0. If not: +1 CR + 20 defenders poisoned.
+
+| Settlement | Status (Day 19 sync) | Refugees → Rethmar | Armed +Rethmar |
+|---|---|---|---|
+| Vraath Keep | ✅ Fallen (Day 6) | ~180 fled | +25 |
+| Drellin's Ferry eq. | ✅ Burned (Day 12-13) | ~1,500 fled | +110 |
+| **Terrelton eq.** | ✅ **Just fallen (Day 19 sync)** | ~1,600 fleeing | +65 (in transit) |
+| Talar | ⏳ Under threat (Day 20-22) | ~400 | +35 |
+| Witchcross | ⏳ Under threat (Day 22-25) | ~1,200 (druids stay) | +60 |
+| Marth Fen area | ⏳ Day 25 sweep | ~300 | +50 |
+| Hammerfist Holds | ✅ Held (+90 survivors; 150 lances conditional) | 0 civilians | +150 ❓ if Tordek wins Dauth |
+| Cannathgate | ✅ Not attacked | 0 | +150 ❓ diplomacy |
+
+
+---
+
+## 3. Active Villain Threads (Countdown Clocks)
 
 State machine, not script. Each villain has an agenda that advances each
 in-world day **whether or not the party intervenes**. When a clock fills,
@@ -55,7 +181,7 @@ the listed consequence triggers.
 
 ---
 
-## 3. Open NPC Knowledge State
+## 4. Open NPC Knowledge State
 
 > Who currently knows what. **Agents must NOT have an NPC reveal something
 > they have not learned in-fiction.** Add new rows when an NPC learns
@@ -89,7 +215,7 @@ the listed consequence triggers.
 
 ---
 
-## 4. Open Promises, Debts, Bargains (PG ↔ World)
+## 5. Open Promises, Debts, Bargains (PG ↔ World)
 
 > Things the PCs are **on the hook for**. Agents must surface these when
 > relevant; they create R.A. Salvatore-style internal stakes.
@@ -107,7 +233,7 @@ the listed consequence triggers.
 
 ---
 
-## 5. Artifact State (current powers, not theoretical max)
+## 6. Artifact State (current powers, not theoretical max)
 
 See `skills/rumblingstone-campaign/references/campaign-artifacts.md` for
 full mechanics. This table is current truth only.
@@ -123,6 +249,7 @@ full mechanics. This table is current truth only.
 | Orbe delle Otto Porte (Githyanki artifact, campaign canon) | Tournament prize, not yet held | Awaits Tournament outcome | N/A until Tordek wins |
 
 **Spent / single-use already burned:**
+
 - Ruby gem of the Crown (used at year -1000 battle)
 - Cuore di Moradin (used to resurrect Hella)
 
@@ -131,7 +258,7 @@ coherence violation — flag to DM.
 
 ---
 
-## 6. Open Narrative Threads (DM tracker)
+## 7. Open Narrative Threads (DM tracker)
 
 Bullet list of unresolved questions. When a thread closes, move it to the
 changelog with the resolution.
@@ -158,7 +285,7 @@ changelog with the resolution.
 
 ---
 
-## 7. Changelog (append-only)
+## 8. Changelog (append-only)
 
 Every state change goes here with date and one-line reason. Never delete
 entries — they become campaign history.
@@ -350,4 +477,54 @@ entries — they become campaign history.
             New NPC knowledge rows in §3: Maewen, Lathander+Mask
             divine awareness. Tempestas row revised. New PNG
             cards: PNG/Maewen/Maewen.md.
+2026-05-05  Army sync v2 — DM realignment: horde baseline rescaled from
+            6.161 (AP-original) to ~10.000 (coherent with scaled Channath
+            Vale cities); ratio target 3:1-like from Hammerfist (900/300)
+            up to max 6:1 worst case / 1.55:1 legendary; PG choices now
+            meaningfully shift balance. Introduced DUAL CLOCK separation:
+              - MARCH CLOCK (official AP): Day 1 → Day 40 Rethmar
+                encampment. Current sync point: **Day 19 = Terrelton
+                falls = end of Battle of Hammerfist**.
+              - RITUAL CLOCK AZARR KUL: /18 independent (rituals only,
+                does NOT advance with march).
+            Dragon contingent set at 5 AP-original upscaled: Abithriax
+            (Red adult), Regiarix (Black young — Rhest), Ozyrrandion
+            (Blue — Tower), Tyrgarun (reserve), Fauci di Palude (Black
+            adult, Hammerfist vanguard). Draconic spawn = 8 Razorfiend
+            (Tiamat colors) assigned to Wyrmlord villains upscaled.
+            NEW: "Compagnia del Teschio Nero" — 650 evil human
+            mercenaries (Thay/Mulhorand) joining for power/money.
+            Gnoll mercenaries expanded to 1.100 (3 tribes).
+            Ghostlord logic: if neutralized by PG → only 400 undead
+            already pre-deployed remain; default hostile → +2.400
+            undead wave at Rethmar Phase 2.
+            No PG interference at Skull Gorge bridge (confirmed). No
+            giant alliance PG-side (giants stay with Red Hand).
+            Files created/replaced:
+            - 00_Red Hand Of Doom/Armate-CALCOLI-ESERCITI-DINAMICI.md
+              (rescaled 10k + dragons + Razorfiend + Teschio Nero +
+              conditional additives table)
+            - 00_Red Hand Of Doom/Armate-SINCRONIZZAZIONE-CAMPAGNA.md
+              (AP March Clock Day 1→40 waypoint ledger)
+            - 09_Continuazione.../Arco-Post-Hammerfist-P3-BATTAGLIA-
+              FINALE-ARMATE-SYNC.md (5 PG scenarios, force balance)
+            §2 Active Forces tracker replaced with dual-clock version.
+2026-05-05  Added §2 Active Forces — Live Army Tracker to state.md as the
+            session-by-session source of truth for force sizes. Created:
+            - 00_Red Hand Of Doom/Armate-CALCOLI-ESERCITI-DINAMICI.md:
+              full initial composition (6,161 total), deployment table
+              (Hammerfist 793/Dauth 575), dynamic march attrition by week,
+              defender coalition scenarios, Dauth multi-faction breakdown.
+            - 00_Red Hand Of Doom/Armate-SINCRONIZZAZIONE-CAMPAGNA.md:
+              battle log waypoint-by-waypoint (Nimon Gap ✅ → Drellin ✅ →
+              Skull Gorge 🔄 → Talar/Terrelton/Witchcross ⏳), refugee flow
+              table (~5.300 civili + ~495 armati verso Rethmar), cumulative
+              loss table per scenario (3.783–5.053 MR a Rethmar), session
+              checklist, infiltrati nell'onda rifugiati.
+            - 00_Red Hand Of Doom/Armate-AGGIORNATO.ods: now 9 sheets
+              (aggiunti Registro Battaglie, Rifugiati Rethmar, Tracker
+              Dinamico). Forza garantita Rethmar aggiornata a 1.746
+              (include rifugiati armati da Nimon+Drellin già arrivati).
+            Current confirmed losses MR: −308 (Days 1-9, Nimon+Drellin
+            +attrition). Main body: 4.793 → 4.485 active.
 ```
